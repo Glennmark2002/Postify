@@ -30,7 +30,7 @@ function PostModal() {
       const { data } = await supabase.storage.from('images').upload(uuidv4(), form);
       
       await axios.post('https://postify-api-glennmark.vercel.app/api/post/create', {
-        userId : currentUser.data._id,
+        userId : currentUser._id,
         image  : `https://blgpvzowtizslguqdryo.supabase.co/storage/v1/object/public/images/${data.path}`, 
         description
       });
