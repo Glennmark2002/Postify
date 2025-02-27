@@ -34,9 +34,9 @@ function Header() {
         </div>
 
       </div>
+      { loading && <Splash />}
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       <PostModal />
-      { loading && <Splash />}
     </>
   );
 }

@@ -21,7 +21,7 @@ function Dropdown({ currentUser }) {
     <div className='dropdown dropdown-end'>
       { currentUser ? 
         ( <div>
-            <img src={currentUser.data.picture} tabIndex={0} className='btn btn-circle avatar'  /> 
+            <img src={currentUser.picture} tabIndex={0} className='btn btn-circle avatar'  /> 
             <ul tabIndex={0} className='menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow'>
               <li><a onClick={handleSignout}>Logout</a></li>
             </ul>

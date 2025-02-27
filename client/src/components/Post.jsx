@@ -7,17 +7,18 @@ import Comment from "./Comment";
 function Post({ post, fetchData }) {
 
   const { currentUser } = useSelector(state => state.user);
+
   const [likes, setLikes] = useState(post.likes.length);
-  const [liked, setLiked] = useState(post.likes.includes(currentUser.data._id));
+  const [liked, setLiked] = useState(post.likes.includes(currentUser._id));
   const [commenSection, setCommentSection] = useState(false);
   const [isComment, setIsComment] = useState(false);
   const toggleCommentSection = () => setCommentSection(prev => !prev);
   const toggleComment = () => setIsComment(prev => !prev);
 
   const handleLike = async () => {
-    const res = await axios.put(`https://postify-api-glennmark.vercel.app/api/post/like/${post._id}`, { userId : currentUser.data._id});
+    const res = await axios.put(`https://postify-api-glennmark.vercel.app/api/post/like/${post._id}`, { userId : currentUser._id});
     setLikes(res.data.likes.length);
-    setLiked(res.data.likes.includes(currentUser.data._id));
+    setLiked(res.data.likes.includes(currentUser._id));
   }
 
   return (
