@@ -25,7 +25,7 @@ function Header() {
         </div>
         
         <div className='navbar-center hidden lg:flex'>
-          <button onClick={togglePostModal} className='btn btn-ghost'> Post Something </button>
+          {currentUser && <button onClick={togglePostModal} className='btn btn-ghost'> Post Something </button> }
         </div>
 
         <div className='navbar-end'>

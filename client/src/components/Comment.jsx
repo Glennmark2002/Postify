@@ -8,7 +8,7 @@ function Comment({ post, currentUser, fetchData }) {
   
   const handleTextInput = async (e) => {
 
-    await axios.post(`http://localhost:3000/api/post/comment/${post._id}`, { text, userId : currentUser.data._id });
+    await axios.post(`https://postify-api-glennmark.vercel.app/api/post/comment/${post._id}`, { text, userId : currentUser.data._id });
 
     setText('');
     let textArea = document.getElementById(post._id);

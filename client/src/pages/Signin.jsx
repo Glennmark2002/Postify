@@ -22,7 +22,7 @@ function Signin() {
     
     try {
       dispatch(signInStart());
-      const res = await axios.post('http://localhost:3000/api/auth/signin', formData);
+      const res = await axios.post('https://postify-api-glennmark.vercel.app/api/auth/signin', formData);
       dispatch(signInSuccess(res.data));
       navigate('/');
 

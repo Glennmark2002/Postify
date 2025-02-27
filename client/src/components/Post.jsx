@@ -15,7 +15,7 @@ function Post({ post, fetchData }) {
   const toggleComment = () => setIsComment(prev => !prev);
 
   const handleLike = async () => {
-    const res = await axios.put(`http://localhost:3000/api/post/like/${post._id}`, { userId : currentUser.data._id});
+    const res = await axios.put(`https://postify-api-glennmark.vercel.app/api/post/like/${post._id}`, { userId : currentUser.data._id});
     setLikes(res.data.likes.length);
     setLiked(res.data.likes.includes(currentUser.data._id));
   }

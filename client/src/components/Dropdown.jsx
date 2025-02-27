@@ -10,7 +10,7 @@ function Dropdown({ currentUser }) {
   const handleSignout = async (e) => {
     try {
       dispatch(signOutStart())
-      await axios.get('http://localhost:3000/api/auth/signout');
+      await axios.get('https://postify-api-glennmark.vercel.app/api/auth/signout');
       dispatch(signOut())
     } catch (error) {
       console.log(error)

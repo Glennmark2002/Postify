@@ -8,7 +8,7 @@ function UserHome() {
   const [posts, setPosts] = useState([]);
 
   const fetchData = async () => {
-    const res = await axios.get('http://localhost:3000/api/post/getpost');
+    const res = await axios.get('https://postify-api-glennmark.vercel.app/api/post/getpost');
     setPosts(res.data);
   }
 
