@@ -17,6 +17,8 @@ function Dropdown({ currentUser }) {
     }
   }
 
+  // console.log(currentUser.data.picture)
+
   return (
     <div className='dropdown dropdown-end'>
       { currentUser ? 
